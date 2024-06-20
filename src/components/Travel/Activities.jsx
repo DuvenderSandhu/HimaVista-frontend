@@ -1,5 +1,5 @@
 import React from 'react'
-import converthtml from '../../../../utils/htmltoreact'
+import converthtml from '../../../utils/htmltoreact.js'
 
 function Activites() {
 

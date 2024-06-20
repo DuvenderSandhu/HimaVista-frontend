@@ -396,8 +396,8 @@ const Nav = () => {
           </div>
           {/* Buttons */}
           <div className="hidden lg:flex lg:justify-end lg:items-center">
-            <Button type="primary" className="mr-2">Sign Up</Button>
-            <Button type="default">Log In</Button>
+            <Button type="primary" className="mr-2"><Link to={"user/register"}>Sign Up</Link></Button>
+            <Button type="default"><Link to={"user/login"}>Log In</Link></Button>
           </div>
         </div>
       </div>

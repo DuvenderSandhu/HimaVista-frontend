@@ -1,5 +1,5 @@
 import React from 'react'
-import converthtml from '../../../../utils/htmltoreact'
+import converthtml from '../../../utils/htmltoreact.js'
 
 function Attractions() {
     const tourist= `  <div class="max-w-4xl mx-auto p-4 sm:p-6 md:p-8 bg-white rounded-lg shadow-lg my-6">

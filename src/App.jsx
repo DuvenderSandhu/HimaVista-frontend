@@ -21,11 +21,15 @@ import Local from './components/Experience/Local'
 import LocalFood from './components/Experience/LocalFood'
 import HandiCraft from './components/Experience/Handicraft'
 import CulturalEvent from './components/Experience/CulturalEvent'
+import CreateBlog from './components/create/Blog'
 const router= createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout/>}>
     <Route path='' element={<Home/>}/>
     <Route path='blogs' element={<Blogs/>}/>
     <Route path='videos' element={<Videos/>}/>
+    <Route path='create' >
+    <Route path='blog' element={<CreateBlog/>}/>
+    </Route>
     <Route path="travel">
       <Route path='tourist-attractions' element={<Attractions/>}/>
       <Route path='itineraries' element={<Itineraries/>}/>
