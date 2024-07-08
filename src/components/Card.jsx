@@ -1,49 +1,39 @@
-import firstImage from '../assets/1.jpg'
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import { Avatar, Card } from 'antd';
+import React from 'react';
+import { Avatar, Card, Rate, Button } from 'antd';
 const { Meta } = Card;
-function CardLayout(props){
-    return (
-        // <div class="max-w-sm shadow-lg shadow-gray-300 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        //     <a href={props.link || "/"}>
-        //         {props.Imageurl?<img class="rounded-t-lg w-[400px] h-[200px]" src={props.Imageurl} alt="" />:<video src={props.VideoUrl}></video>}
-        //     </a>
-        //     <div class="p-5">
-        //         <a href="#">
-        //             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.title}</h5>
-        //         </a>
-        //         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.desc}</p>
-        //         <a href={props.link || "/"} class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        //             Read more
-        //             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-        //                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-        //             </svg>
-        //         </a>
-        //     </div>
-        // </div>
-  <Card
-  hoverable={true}
-    style={{
-      width: 400,
-      height:350
-    }}
-    cover={
-      <img
-       className='w-[350px] h-[200px]'
-        alt={props.Imageurl}
-        src={props.Imageurl}
-      />
-    }
-    bordered={true}
-  >
-    <Meta
-      avatar={<Avatar src={props.Imageurl} />}
-      title={props.title}
-      description={props.desc.length<100?props.desc:props.desc.slice(0,100)+"..."}
-    />
-  </Card>
 
-    )
+function CardLayout({ Imageurl, title, desc, price, rating, category, brand, stock }) {
+  return (
+    <Card
+      hoverable
+      className="w-96 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2"
+      cover={
+        <img
+          className="w-full h-52 object-cover"
+          alt={title}
+          src={Imageurl}
+        />
+      }
+      bordered
+    >
+      <Meta
+        avatar={<Avatar src={Imageurl} />}
+        title={title}
+        description={
+          <>
+            <p className="text-gray-700 mb-2">{desc.length < 100 ? desc : desc.slice(0, 100) + "..."}</p>
+            <p className="text-gray-500 mb-1"><strong>Category:</strong> {category}</p>
+            <p className="text-gray-500 mb-1"><strong>Brand:</strong> {brand}</p>
+            <p className="text-gray-900 font-bold mb-2"><strong>Price:</strong> ${price}</p>
+            <p className="text-gray-500 mb-1"><strong>Stock:</strong> {stock ? 'In Stock' : 'Out of Stock'}</p>
+            <Rate disabled defaultValue={4} className="mb-2" />
+            <Button type="primary" className="w-full mb-2">Add to Cart</Button>
+            <Button type="default" className="w-full">View Details</Button>
+          </>
+        }
+      />
+    </Card>
+  );
 }
 
-export default CardLayout
+export default CardLayout;

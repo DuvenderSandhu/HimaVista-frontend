@@ -22,6 +22,7 @@ import LocalFood from './components/Experience/LocalFood'
 import HandiCraft from './components/Experience/Handicraft'
 import CulturalEvent from './components/Experience/CulturalEvent'
 import CreateBlog from './components/create/Blog'
+import Shop from './components/shop/Shop'
 const router= createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout/>}>
     <Route path='' element={<Home/>}/>
@@ -56,6 +57,10 @@ const router= createBrowserRouter(createRoutesFromElements(
     </Route>
     <Route path='localuser' >
       <Route path='login' element={<LocalUser/>}/>
+      <Route path='register' element={<LocalUserRegister/>}/>
+    </Route>
+    <Route path='shop' >
+      <Route path='' element={<Shop/>}/>
       <Route path='register' element={<LocalUserRegister/>}/>
     </Route>
   </Route>

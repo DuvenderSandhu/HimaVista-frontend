@@ -398,6 +398,8 @@ const Nav = () => {
           <div className="hidden lg:flex lg:justify-end lg:items-center">
             <Button type="primary" className="mr-2"><Link to={"user/register"}>Sign Up</Link></Button>
             <Button type="default"><Link to={"user/login"}>Log In</Link></Button>
+          <Button type="default" block onClick={()=>{console.log("HI")}}>Shop</Button>
+
           </div>
         </div>
       </div>
@@ -520,6 +522,7 @@ const Nav = () => {
   />
           <Button type="primary" block className="mb-2" onClick={onClose}>Sign Up</Button>
           <Button type="default" block onClick={onClose}>Log In</Button>
+          <Button type="default" block onClick={()=>{console.log("HI")}}>Shop</Button>
         </div>
       </Drawer>
     </nav>
