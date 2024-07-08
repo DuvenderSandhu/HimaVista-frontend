@@ -1,7 +1,5 @@
 # HimaVista
 
-![App Logo](images/logo.png)
-
 ## Overview
 
 Welcome to **HimaVista**, your gateway to exploring the cultural richness and natural beauty of Himachal Pradesh. This web application is designed to immerse users in the diverse districts, cultural events, local products, and historical sites that define this beautiful region of India.
